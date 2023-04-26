@@ -537,7 +537,7 @@ static int gasket_perform_mapping(struct gasket_page_table *pg_tbl,
 				return -EINVAL;
 
 			/* Page already mapped for DMA. */
-#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 1, 0)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 1, 0)
 			ptes[i].dma_addr = sg_page_iter_dma_address(sg_iter);
 #else
 			ptes[i].dma_addr = sg_page_iter_dma_address(
