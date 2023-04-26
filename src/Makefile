@@ -35,6 +35,6 @@ clean:
 install:
 #	sudo install -v -m 755 spkut /bin/
 	sudo install -v -m 755 -d /lib/modules/$(KVER)/
-#	sudo install -v -m 644 simple-kmod.ko        /lib/modules/$(KVER)/simple-kmod.ko
-#	sudo install -v -m 644 simple-procfs-kmod.ko /lib/modules/$(KVER)/simple-procfs-kmod.ko
+	sudo install -v -m 644 apex.ko.xz        /lib/modules/$(KVER)/apex.ko.xz
+	sudo install -v -m 644 gasket.ko.xz /lib/modules/$(KVER)/gasket.ko.xz
 	sudo depmod -a
